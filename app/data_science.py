@@ -49,6 +49,7 @@ class GlobalModelLoad(type):
     def  __new__(meta, name, bases, clzdict):
         cls = super().__new__(type,name,bases,clzdict)
 
+        # Basic model. TODO: Clean up, add method for this.
         cls._model = Pipeline([
         ('tfidf', TfidfVectorizer(
             max_features = 2000, # wild guess
@@ -59,8 +60,8 @@ class GlobalModelLoad(type):
         ])
 
 
+        # Train model. TODO: Add method
         X_train, y_train = DataStore.get_training_data()
-
         cls._model.fit(X_train,y_train)
 
         return cls
