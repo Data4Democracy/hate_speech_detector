@@ -6,3 +6,4 @@
 
 #python
 notebooks/.ipynb_checkpoints/
+app/__pycache__/
