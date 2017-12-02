@@ -23,7 +23,8 @@ TODO: Docker, dockerhub.
 
 ### Usage
 
-From the hate_speech_detector directory:
+To run, you must set the environment variable "TRAINING_DATA_LOCATION". Then, from the hate_speech_detector directory, type
+
 ```shell
 python -m app.app
 ```
