@@ -9,6 +9,30 @@ All data used in this analysis is stored in the [data](https://github.com/Data4D
 The paper by Davidson et al. can be found here:
 Thomas Davidson, Dana Warmsley, Michael Macy, Ingmar Weber. 2017. "[Automated Hate Speech Detection and the Problem of Offensive Language](https://aaai.org/ocs/index.php/ICWSM/ICWSM17/paper/view/15665)". Proceedings of the 11th International AAAI Conference on Web and Social Media (ICWSM).
 
+## Demo REST API
+
+A REST API has been designed to demo the functionality of a basic model. 
+
+### Installation
+
+```shell
+pip install -r requirements.txt
+```
+
+TODO: Docker, dockerhub. 
+
+### Usage
+
+To run, you must set the environment variable "TRAINING_DATA_LOCATION". Then, from the hate_speech_detector directory, type
+
+```shell
+python -m app.app
+```
+Then, use the configured IP displayed. One example usage is to call the /demo endpoint to see the model predicting on a held out test example. Real time predictions can be done via the /label endpoint.
+
+```shell
+curl -H "Content-Type: application/json" -X POST -d '{"text":"Text that might be offensive or hateful... or not."}' http://127.0.0.1:5000/label
+```
 
 ## To Do:
 
@@ -17,6 +41,11 @@ There are currently two Jupyter Notebooks containing models to classify the data
 
 ### Data preprocessing
 There is currently very little preprocessing done on this data. Would someone be interested in created some useful categories for machine learning and plugging them back into the models? My guess is feature engineering has the most potential to improve the model.
+
+
+### Front End
+
+A front end for the demo app which can demo random elements of the test set or allow the user to input their own text.
 
 ### Dataset
 The Davidson et al. paper remarked on some possible mislabelings in the dataset. Is mislabeling common in the dataset? Fixing any labels would definitely improve our ability to create a classifier. How big a problem is this? Does someone want to look at some of the misclassifications and see if any are incorrectly labeled?
