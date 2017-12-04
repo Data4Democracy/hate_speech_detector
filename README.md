@@ -11,28 +11,44 @@ Thomas Davidson, Dana Warmsley, Michael Macy, Ingmar Weber. 2017. "[Automated Ha
 
 ## Demo REST API
 
-A REST API has been designed to demo the functionality of a basic model. 
+A REST API has been designed to demo the functionality of a basic model. The code will train a basic model as defined in the data_science.py and use this model to make predictions.
 
-### Installation
+### Installation (Docker)
+
+Navigate to the hate_speech_detector/ directory and build the container:
 
 ```shell
-pip install -r requirements.txt
+docker build -t [container-name] .
 ```
-
-TODO: Docker, dockerhub. 
 
 ### Usage
 
-To run, you must set the environment variable "TRAINING_DATA_LOCATION". Then, from the hate_speech_detector directory, type
+When you run the container, you must also expose the port 8000. For example:
+
 
 ```shell
-python -m app.app
+docker run -p 8000:8000 -t [container-name]
 ```
-Then, use the configured IP displayed. One example usage is to call the /demo endpoint to see the model predicting on a held out test example. Real time predictions can be done via the /label endpoint.
+
+#### API Endpoints
+
+- /label
+
+Then, the API can be called to predict the label on new text data via:
 
 ```shell
-curl -H "Content-Type: application/json" -X POST -d '{"text":"Text that might be offensive or hateful... or not."}' http://127.0.0.1:5000/label
+curl -H "Content-Type: application/json" -X POST -d '{"text":"Text that might be offensive or hateful... or not."}' http://0.0.0.0:8000/label
 ```
+
+- /demo
+
+You may also see the model predict on held out test set values via:
+
+```shell
+curl http://0.0.0.0:8000/demo
+```
+
+
 
 ## To Do:
 
