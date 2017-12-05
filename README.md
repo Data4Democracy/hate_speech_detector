@@ -30,6 +30,10 @@ When you run the container, you must also expose the port 8000. For example:
 docker run -p 8000:8000 -t [container-name]
 ```
 
+#### Labels
+
+Labels are Hate = 0, Offensive = 1, Not Offensive = 2.
+
 #### API Endpoints
 
 - /label
@@ -40,6 +44,19 @@ Then, the API can be called to predict the label on new text data via:
 curl -H "Content-Type: application/json" -X POST -d '{"text":"Text that might be offensive or hateful... or not."}' http://0.0.0.0:8000/label
 ```
 
+Output Ex:
+
+```shell
+{
+  "label": 2, 
+  "text": "Text that might be offensive or hateful... or not."
+}
+
+```
+
+In this case, "text" is the input text and label is the predicted label from the model.
+
+
 - /demo
 
 You may also see the model predict on held out test set values via:
@@ -47,7 +64,17 @@ You may also see the model predict on held out test set values via:
 ```shell
 curl http://0.0.0.0:8000/demo
 ```
+Output Ex:
 
+```shell
+{
+  "label": 2, 
+  "text": "#stateoftheunion would last 15mins if they let the President talk all that standing up clapping is for the birds", 
+  "true": 2
+}
+```
+
+Here, "text" is the text input, "label" is the predicted label from the model, and "true" is the actual label given by a human. 
 
 
 ## To Do:
