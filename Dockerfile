@@ -10,4 +10,6 @@ ENV TRAINING_DATA_LOCATION data/twitter-hate-speech2.csv
 
 RUN pip install -r requirements.txt
 
+RUN python -m app.training
+
 ENTRYPOINT ["gunicorn","-b", "0.0.0.0:8000", "app.app:app"]
