@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 
-from app.data_science import DataStore
-from app.data_science import Model
+from app.core import DataStore
+from app.core import Model
 
 app = Flask(__name__)
 
