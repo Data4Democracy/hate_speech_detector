@@ -1,9 +1,2 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-
-
-#python
-notebooks/.ipynb_checkpoints/
-app/__pycache__/
+*.pyc
+__pycache__
