@@ -76,12 +76,11 @@ Output Ex:
 
 Here, "text" is the text input, "label" is the predicted label from the model, and "true" is the actual label given by a human. 
 
-### Deploy with docker-compose
+### Deploy with prebuilt containers via docker-compose
 
 
 ```shell
-docker-compose build
-docker-compose up
+docker-compose -f docker-compose-prebuilt.yml up
 ```
 
 At this point, if you set this up on AWS, then you could navigate to
