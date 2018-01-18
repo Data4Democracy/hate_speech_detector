@@ -18,7 +18,7 @@ A REST API has been designed to demo the functionality of a basic model. The cod
 Navigate to the hate_speech_detector/ directory and build the container:
 
 ```shell
-docker build -t [container-name] .
+docker build -t [container-name] ./app
 ```
 
 ### Usage
@@ -76,6 +76,20 @@ Output Ex:
 
 Here, "text" is the text input, "label" is the predicted label from the model, and "true" is the actual label given by a human. 
 
+### Deploy with prebuilt containers via docker-compose
+
+
+```shell
+docker-compose -f docker-compose-prebuilt.yml up
+```
+
+At this point, if you set this up on AWS, then you could navigate to
+
+```shell
+[your aws ip]/demo
+```
+
+in your browser to see the demo.
 
 ## To Do:
 
