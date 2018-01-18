@@ -3,8 +3,8 @@ FROM python:3.5-slim
 WORKDIR ./src
 
 ADD requirements.txt requirements.txt
-ADD app/ ./app/
-ADD data/twitter-hate-speech2.csv ./data/
+ADD app ./app/
+ADD ./data/twitter-hate-speech2.csv ./data/
 
 ENV TRAINING_DATA_LOCATION data/twitter-hate-speech2.csv
 
