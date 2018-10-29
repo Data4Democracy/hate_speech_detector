@@ -8,4 +8,4 @@ gunicorn==19.7.1
 vaderSentiment==2.5
 nltk==3.2.5
 textstat==0.4.1
-requests==2.18.4
+requests==2.20.0
