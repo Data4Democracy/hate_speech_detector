@@ -11,7 +11,7 @@ Thomas Davidson, Dana Warmsley, Michael Macy, Ingmar Weber. 2017. "[Automated Ha
 
 ## Demo REST API
 
-A REST API has been designed to demo the functionality of a basic model. The code will train a basic model as defined in the data_science.py and use this model to make predictions.
+A REST API has been designed to demo the functionality of a basic model. The code will train a basic model as defined in the data_science.py and use this model to make predictions. To get the current IP address, ask in the Data for Democracy #p-hate-speech Slack channel.
 
 ### Installation (Docker)
 
