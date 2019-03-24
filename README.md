@@ -1,5 +1,9 @@
 # hate_speech_detector
 
+## Project Status
+
+We have built a few fully working hate speech detection models. This project is currently in hibernation, in that there's not an active use case at the moment but the models are ready to go. Every once in a while we'll tweak the models a bit but in general there is not active development on this project. If you know of a possible application, please reach out to us. Also, if you're interested in helping, we're always looking for help, whether more data, more models, or any other interesting component of hate speech detection. If you're interested in using or working on this model, fel free to reach out to Julius Simonelli (jss367) on the Slack channel.
+
 ## Data
 
 We are currently working with the data collected by [Davidson et al.](https://aaai.org/ocs/index.php/ICWSM/ICWSM17/paper/view/15665) for their research on hate speech detection. The dataset contains tweets that are labeled as either hate speech, offensive language, or neither. The data were pulled from [Hatebase.org](https://www.hatebase.org/), an organization that collects instances of potential hate speech. The data were then labeled using [CrowdFlower](https://www.crowdflower.com/), which uses non-specialists to clean and label data. Each tweet was reviewed by three or more people and a majority-wins approach was taken when there was disagreement.
