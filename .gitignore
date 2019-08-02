@@ -1,2 +1,6 @@
 *.pyc
 __pycache__
+*.ipynb
+*.xlsx
+Python/code/bad_words_from_wiki.txt
+Python/code/.DS_Store
