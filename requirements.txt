@@ -6,6 +6,6 @@ scipy==0.18.1
 Werkzeug==0.15.3
 gunicorn==19.7.1
 vaderSentiment==2.5
-nltk==3.4.5
+nltk==3.6.5
 textstat==0.4.1
 requests==2.20.0
