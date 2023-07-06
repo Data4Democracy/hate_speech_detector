@@ -2,7 +2,7 @@ Flask==2.3.2
 numpy==1.22.0
 pandas==0.19.2
 scikit-learn==0.18.1
-scipy==0.18.1
+scipy==1.10.0
 Werkzeug==2.2.3
 gunicorn==19.7.1
 vaderSentiment==2.5
